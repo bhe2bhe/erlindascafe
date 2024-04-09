@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Page</title>
+    <link rel="stylesheet" href="css/logo.css">
+</head>
+<body>
+    <div id="container">
+        <div id="logo-container">
+            <img src="images/erlindas-logo.png" alt="Logo">
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // Display the logo for 2 seconds before redirecting to the main home page
+    setTimeout(function() {
+        window.location.href = "index.html"; // Redirect to the main home page
+    }, 4000); // 2000 milliseconds = 2 seconds
+});
+
+    </script>
+    
+</body>
+</html>
