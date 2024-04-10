@@ -21,16 +21,14 @@
 
 body {
     font-family: "Glass Antiqua", cursive;
-    /* min-height: 100vh; */
     background: url('../images/erlinda-food.jpg') no-repeat;
-    background-position:top ;
+    background-position:initial ;
     background-size:contain;
     background-color: black;
 }
 
 header {
     position: fixed;
-    /* border-bottom: .3px solid gray; */
     top: 0;
     left: 0;
     width: 100%;
@@ -147,7 +145,6 @@ header a img{
     background-color: rgba(0, 0, 0, 0.401);
     width: 70%;
     transition: transform 0.5s ease, opacity 0.5s ease;
-    /* position: absolute; */
     opacity: 0;
     left: -100%;
     letter-spacing: 3px;
@@ -164,7 +161,6 @@ header a img{
 }
 
 .our-story {
-    /* position: relative; */
     background-color:  rgb(30, 30, 30);
     padding: 100px 100px;
     color: rgb(214, 213, 213);
@@ -201,7 +197,6 @@ header a img{
 }
 
 .animations {
-    /* position: relative; */
     width: 100%;
     background-color: black;
     top: calc(100%); /* Adjust the offset as needed */
