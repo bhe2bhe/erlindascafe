@@ -11,20 +11,13 @@ document.querySelectorAll(".navbar a").forEach(n => n.addEventListener("click", 
     navBar.classList.remove("active");
 }))
 
-// JavaScript to move the .intro div from left to right
-let introDiv = document.querySelector('.intro');
-let position = -introDiv.offsetWidth; // Start off-screen to the left
-let direction = 1;
-let maxPosition = 0; // Calculate the maximum position
-let animationSpeed = 4; // Adjust the animation speed as needed
-
 // JavaScript to move the .intro div from left to right after intro animation
 setTimeout(function() {
     let introDiv = document.querySelector('.intro');
     let position = -introDiv.offsetWidth; // Start off-screen to the left
     let direction = 1;
     let maxPosition = 0; // Calculate the maximum position
-    let animationSpeed = 4; // Adjust the animation speed as needed
+    let animationSpeed = 3; // Adjust the animation speed as needed
 
     function moveIntro() {
         position += direction * animationSpeed;
