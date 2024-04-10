@@ -1,25 +1,76 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logo Page</title>
-    <link rel="stylesheet" href="css/logo.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            opacity: 1;
+            transition: opacity 2s; /* Fade out transition duration */
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .logo-container img {
+            width: 600px; /* Adjust size as needed */
+        }
+        .fade-out {
+            opacity: 0; /* Fade out */
+        }
+        @media (max-width: 768px) {
+            .logo-container img {
+                width: 390px;
+            }
+        }
+        @media (max-width: 430px) {
+            .logo-container img {
+                width: 260px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div id="container">
-        <div id="logo-container">
-            <img src="images/erlindas-logo.png" alt="Logo">
+    <div class="container" id="container">
+        <div class="logo-container">
+            <img src="{% static 'users/images/erlindas-logo.png' %}" alt="">
         </div>
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-    // Display the logo for 2 seconds before redirecting to the main home page
-    setTimeout(function() {
-        window.location.href = "index.html"; // Redirect to the main home page
-    }, 4000); // 2000 milliseconds = 2 seconds
-});
-
+            // Display the logo for 2 seconds before redirecting to the main home page
+            setTimeout(function() {
+                fadeOutAndRedirect(); // Redirect to the main home page
+            }, 4000); // 4000 milliseconds = 4 seconds
+        
+            // Function to fade out the container and then redirect to the home page
+            function fadeOutAndRedirect() {
+                // Add fade-out class to the container
+                document.getElementById('container').classList.add('fade-out');
+                
+                // Wait for the transition to complete before redirecting
+                setTimeout(function() {
+                    window.location.href = "/home";
+                }, 2000); // Adjust the delay as needed to match the duration of the fade-out animation
+            }
+        });
+        
     </script>
     
 </body>

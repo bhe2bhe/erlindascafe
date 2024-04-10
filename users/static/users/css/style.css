@@ -6,19 +6,6 @@
     box-sizing: border-box;
 }
 
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: black;
-}
-
-.logo-container img {
-    width: 600px; /* Adjust size as needed */
-}
-
-
 body {
     font-family: "Glass Antiqua", cursive;
     background: url('../images/erlinda-food.jpg') no-repeat;
