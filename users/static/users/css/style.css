@@ -528,3 +528,12 @@ header a img{
         opacity: 1;
     }
 }
+
+@media (max-width: 386px) {
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+    .intro h4 {
+        font-size: 1rem;
+    }
+}
