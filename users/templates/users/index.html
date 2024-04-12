@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo"><img src="{% static 'users/images/erlindas-logo.png' %}" alt=""></a>
+        <a href="{% url 'users:logo' %}" class="logo"><img src="{% static 'users/images/erlindas-logo.png' %}" alt=""></a>
         <nav class="navbar">
             <a href="#">Home</a>
             <a href="#">About</a>
@@ -83,7 +83,7 @@
     </section>
     <section class="footer">
         <div class="end-message">
-            <a href="#"><img src="{% static 'users/images/erlindas-logo.png' %}" alt=""></a>
+            <a href="{% url 'users:logo' %}"><img src="{% static 'users/images/erlindas-logo.png' %}" alt=""></a>
             <h1>the reason you crave middle-eastern</h1>
         </div>
         <ul>
