@@ -1,0 +1,97 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erlinda's Cafe</title>
+    <link rel="stylesheet" href="{% static 'users/css/menu.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'users:logo' %}" class="logo"><img src="{% static 'users/images/erlindas-logo.png' %}" alt=""></a>
+        <nav class="navbar">
+            <a href="{% url 'users:show_homepage' %}">Home</a>
+            <a href="#">About</a>
+            <a href="{% url 'users:menu' %}">Menu</a>
+            <a href="#">Franchise</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <div class="intro">
+        <h1>Our Menu</h1>
+    </div>
+    
+    <section class="category">
+        <div class="container">
+            <div class="card">
+                <div class="front">
+                    
+                    <img src="{% static 'users/images/beverages.jpg' %}">
+                    <p>Beverages</p>
+                </div>
+                <div class="back">
+                    <h3>Back of Card</h3>
+                    <p>Additional info</p>
+                </div>                        
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="front">
+                    <img src="{% static 'users/images/meal.jpg' %}" alt="">
+                    <p>Meals</p>
+                </div>
+                <div class="back">
+                    <h3>Back of Card</h3>
+                    <p>Additional info</p>
+                </div>                        
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="front">
+                    <img src="{% static 'users/images/nachos.jpg' %}" alt="">
+                    <p>Snacks</p>
+                </div>
+                <div class="back">
+                    <h3>Back of Card</h3>
+                    <p>Additional info</p>
+                </div>                        
+            </div>
+        </div>
+        
+        
+    </section>
+    
+    
+    
+    <section class="footer">
+        <div class="end-message">
+            <a href="{% url 'users:logo' %}"><img src="{% static 'users/images/erlindas-logo.png' %}" alt=""></a>
+            <h1>the reason you crave middle-eastern</h1>
+        </div>
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>MENU</li>
+            <li>FRANCHISE</li>
+            <li>CONTACT</li>
+        </ul>
+        <div class="end-notes">
+            <p>MONDAY - FRIDAY: 11:30AM - 11PM | SATURDAY & SUNDAY: 11:30AM - 12AM</p>
+            <p>CHRISTMAS EVE: 11:30AM - 4PM</p>
+            <p>CHRISTMAS DAY: CLOSED | NEW YEAR'S DAY: CLOSED</p>
+            <p class="copyright">COPYRIGHT 2024 | DEVELOPED BY ABT TECHS</p>
+        </div>
+        
+    </section>
+    
+    <script src="{% static 'users/script.js' %}"></script>
+</body>
+</html>
