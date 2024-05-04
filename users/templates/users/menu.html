@@ -38,6 +38,7 @@
                 <div class="back">
                     <h3>Back of Card</h3>
                     <p>Additional info</p>
+                    <a href="#beverages-menu" class="menu-btn">See Menu Items</a>
                 </div>                        
             </div>
         </div>
@@ -45,11 +46,12 @@
             <div class="card">
                 <div class="front">
                     <img src="{% static 'users/images/meal.jpg' %}" alt="">
-                    <p>Meals</p>
+                    <p>Meals</p>                    
                 </div>
                 <div class="back">
                     <h3>Back of Card</h3>
                     <p>Additional info</p>
+                    <a href="#meals-menu" class="menu-btn">See Menu Items</a>
                 </div>                        
             </div>
         </div>
@@ -62,6 +64,7 @@
                 <div class="back">
                     <h3>Back of Card</h3>
                     <p>Additional info</p>
+                    <a href="#snacks-menu" class="menu-btn">See Menu Items</a>
                 </div>                        
             </div>
         </div>        
@@ -82,15 +85,139 @@
             </div>
         </div>
     </section>
-    <section class="beverage-items">
+    <section class="beverage-items" id="beverages-menu">
         <div class="row">
-            <h1>OUR WORLD-CLASS COFFEE AND MILKTEA</h1>
+            <h1>OUR WORLD-CLASS COFFEE & MILKTEA</h1>
         </div>
-        <div class="row">
-
+        <div class="b-row">
+            <div class="b-item">
+                <div class="item-image">
+                    <img src="{% static 'users/images/matcha.jpg' %}" alt="">
+                </div>
+                <div class="item-caption">
+                    <h3>Matcha Milktea</h3>
+                </div>                
+                <div class="dot-dot">--------------------------------------------------</div>
+                <div class="price">
+                    <p><b>P150</b></p>
+                </div>
+            </div>
+            <div class="b-item">
+                <div class="item-image">
+                    <img src="{% static 'users/images/erlinda-drink2.jpg' %}" alt="">
+                </div>
+                <div class="item-caption">
+                    <h3>Capuccino</h3>
+                </div>                
+                <div class="dot-dot">--------------------------------------------------</div>
+                <div class="price">
+                    <p><b>P150</b></p>
+                </div>
+            </div>
+            
         </div>
     </section>
 
+    <section class="category-intro">
+        <div class="row">            
+            <div class="person">
+                <img src="{% static 'users/images/waiter.jpg' %}" alt="">
+            </div>
+            <div class="caption">
+                <h1>Hungry for Middle-Eastern?</h1>
+                <p>Savor the rich aroma of freshly brewed bliss at our cozy corner. </p>
+                <br>
+                <p class="feedback">
+                    "Erlinda's coffee is a game-changer! Its bold flavor and smooth texture are unmatched. It's like a hug in a mug every morning!"
+                    <span class="feedback-by">&mdash; AB Tagg, CEO ABT Techs</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="beverage-items" id="meals-menu">
+        <div class="row">
+            <h1>TASTE OUR MIDDLE-EASTERN FLAVORS</h1>
+        </div>
+        <div class="b-row">
+            <div class="b-item">
+                <div class="item-image">
+                    <img src="{% static 'users/images/matcha.jpg' %}" alt="">
+                </div>
+                <div class="item-caption">
+                    <h3>Biryani</h3>
+                </div>                
+                <div class="dot-dot">--------------------------------------------------</div>
+                <div class="price">
+                    <p><b>P150</b></p>
+                </div>
+            </div>
+            <div class="b-item">
+                <div class="item-image">
+                    <img src="{% static 'users/images/erlinda-drink2.jpg' %}" alt="">
+                </div>
+                <div class="item-caption">
+                    <h3>Biryani</h3>
+                </div>                
+                <div class="dot-dot">--------------------------------------------------</div>
+                <div class="price">
+                    <p><b>P150</b></p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="category-intro">
+        <div class="row">            
+            <div class="person">
+                <img src="{% static 'users/images/waiter2.jpg' %}" alt="">
+            </div>
+            <div class="caption">
+                <h1>Craving a quick bite?</h1>
+                <p>Savor the rich aroma of freshly brewed bliss at our cozy corner. </p>
+                <br>
+                <p class="feedback">
+                    "Erlinda's coffee is a game-changer! Its bold flavor and smooth texture are unmatched. It's like a hug in a mug every morning!"
+                    <span class="feedback-by">&mdash; AB Tagg, CEO ABT Techs</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="beverage-items" id="snacks-menu">
+        <div class="row">
+            <h1>SAVOR EVERY QUICK BITE</h1>
+        </div>
+        <div class="b-row">
+            <div class="b-item">
+                <div class="item-image">
+                    <img src="{% static 'users/images/matcha.jpg' %}" alt="">
+                </div>
+                <div class="item-caption">
+                    <h3>Biryani</h3>
+                </div>                
+                <div class="dot-dot">--------------------------------------------------</div>
+                <div class="price">
+                    <p><b>P150</b></p>
+                </div>
+            </div>
+            <div class="b-item">
+                <div class="item-image">
+                    <img src="{% static 'users/images/erlinda-drink2.jpg' %}" alt="">
+                </div>
+                <div class="item-caption">
+                    <h3>Biryani</h3>
+                </div>                
+                <div class="dot-dot">--------------------------------------------------</div>
+                <div class="price">
+                    <p><b>P150</b></p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
     
     
     <section class="footer">
@@ -98,13 +225,7 @@
             <a href="{% url 'users:logo' %}"><img src="{% static 'users/images/erlindas-logo.png' %}" alt=""></a>
             <h1>the reason you crave middle-eastern</h1>
         </div>
-        <ul>
-            <li>HOME</li>
-            <li>ABOUT</li>
-            <li>MENU</li>
-            <li>FRANCHISE</li>
-            <li>CONTACT</li>
-        </ul>
+        
         <div class="end-notes">
             <p>MONDAY - FRIDAY: 11:30AM - 11PM | SATURDAY & SUNDAY: 11:30AM - 12AM</p>
             <p>CHRISTMAS EVE: 11:30AM - 4PM</p>
