@@ -223,14 +223,15 @@ header a img{
 .menu-btn {
     margin-top: 10px;
     text-decoration: none;
-    background-color: orange;
+    background-color: rgb(145, 104, 53);
+    color: white;
     padding: 10px 20px;
     border-radius: 8px;
 }
 
 .menu-btn:hover {
     background-color: rgba(255, 153, 0, 0.771);
-    color: white;
+    color: black;
 }
 
 .category-intro {
