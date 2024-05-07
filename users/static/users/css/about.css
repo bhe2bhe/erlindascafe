@@ -11,9 +11,7 @@ body {
     background: url('../images/bar-counter.jpg') no-repeat;
     background-position:top center;
     background-size: contain;
-    /* background-size: contain; */
     background-color: black;
-    /* min-height: 200vh; */
 }
 
 header {
