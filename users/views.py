@@ -10,3 +10,6 @@ def show_homepage(request):
 
 def menu(request):
     return render(request,'users/menu.html')
+
+def about(request):
+    return render(request,'users/about.html')
