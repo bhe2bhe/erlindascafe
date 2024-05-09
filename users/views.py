@@ -13,3 +13,12 @@ def menu(request):
 
 def about(request):
     return render(request,'users/about.html')
+
+def contact(request):
+    return render(request,'users/contact.html')
+
+def employee(request):
+    return render(request,'users/employee.html')
+
+def franchise(request):
+    return render(request,'users/franchise.html')

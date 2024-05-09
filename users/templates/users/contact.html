@@ -1,0 +1,77 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erlinda's Cafe | Contact</title>
+    <link rel="stylesheet" href="{% static 'users/css/contact.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'users:logo' %}" class="logo"><img src="{% static 'users/images/erlindas-logo.png' %}" alt=""></a>
+        <nav class="navbar">
+            <a href="{% url 'users:show_homepage' %}">Home</a>
+            <a href="{% url 'users:about' %}">About</a>
+            <a href="{% url 'users:menu' %}">Menu</a>
+            <a href="{% url 'users:franchise' %}">Franchise</a>
+            <a href="{% url 'users:contact' %}">Contact</a>
+        </nav>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <div class="top">
+        <h1>Connect with us via Facebook</h1>
+        <div class="fb-logo-container">
+            <img class="container-logo" src="{% static 'users/images/erlindas-logo.png' %}" alt="">
+            <img class="fb-logo" src="{% static 'users/images/fb-logo.png' %}">
+        </div>
+        <div class="buttons">
+            <a class="see-fb" href="">SEE FACEBOOK PAGE</a>
+            <a class="messenger" href="">Take me straight to Messenger</a>
+        </div>
+    </div>
+    <div class="bg">
+        <img src="{% static 'users/images/coffee-sketch.png' %}" alt="">
+    </div>
+    <div class="middle">
+        <div class="mid-container">
+            <h1>Contact us</h1>
+            <div class="phone-container">
+                <img src="{% static 'users/images/phone.webp' %}" alt="">
+                <div class="pc-content">
+                    <p>For franchising, for delivery, and other inquiries:</p>
+                    <p><b>09991234567</b> - Smart</p>
+                    <p><b>09061234567</b> - Globe</p>
+                </div>                    
+            </div>            
+        </div>            
+    </div>
+    <div class="end-note">
+        <h1>Come & be part of our <span class="erlindas-text">Erlinda's Cafe Family!</span></h1>
+        <div class="coffee-end-notes">
+            <img src="{% static 'users/images/coffee-sketch.png' %}" alt="">
+        </div>
+        
+    </div>
+    <section class="footer">
+        <div class="end-message">
+            <a href="logo.html"><img src="{% static 'users/images/erlindas-logo.png' %}" alt=""></a>
+            <h1>the reason you crave middle-eastern</h1>
+        </div>
+        <div class="end-notes">
+            <p>MONDAY - FRIDAY: 11:30AM - 11PM | SATURDAY & SUNDAY: 11:30AM - 12AM</p>
+            <p>CHRISTMAS EVE: 11:30AM - 4PM</p>
+            <p>CHRISTMAS DAY: CLOSED | NEW YEAR'S DAY: CLOSED</p>
+            <p class="copyright">COPYRIGHT 2024 | DEVELOPED BY ABT TECHS</p>
+        </div>
+        
+    </section>
+    
+</body>
+<script src="{% static 'users/script.js' %}"></script>
+</html>

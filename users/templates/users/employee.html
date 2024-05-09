@@ -1,0 +1,63 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erlinda's Cafe | Contact</title>
+    <link rel="stylesheet" href="{% static 'users/css/employee.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'users:logo' %}" class="logo"><img src="{% static 'users/images/erlindas-logo.png' %}" alt=""></a>
+        <nav class="navbar">
+            <a href="{% url 'users:show_homepage' %}">Home</a>
+            <a href="{% url 'users:about' %}">About</a>
+            <a href="{% url 'users:menu' %}">Menu</a>
+            <a href="{% url 'users:franchise' %}">Franchise</a>
+            <a href="{% url 'users:contact' %}">Contact</a>
+        </nav>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Erlinda's Employee of the Month</h1>
+        <div class="employee-img">
+            <img src="{% static 'users/images/waiter.png' %}" alt="">
+        </div>
+        <h2>Juan dela Cruz</h2>
+        <img src="{% static 'users/images/trophy.webp' %}" alt="">
+        <p class="person-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ab ipsa distinctio odit autem, tempora reprehenderit temporibus, sint eius dolores eos maxime placeat at eum quod harum accusamus saepe quisquam!</p>
+        <br>
+        <p class="person-msg">Juan's message for everyone: "Magsipag kayo!"</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <section class="footer">
+        <div class="end-message">
+            <a href="logo.html"><img src="{% static 'users/images/erlinda-logo.png' %}" alt=""></a>
+            <h1>the reason you crave middle-eastern</h1>
+        </div>
+        <div class="end-notes">
+            <p>MONDAY - FRIDAY: 11:30AM - 11PM | SATURDAY & SUNDAY: 11:30AM - 12AM</p>
+            <p>CHRISTMAS EVE: 11:30AM - 4PM</p>
+            <p>CHRISTMAS DAY: CLOSED | NEW YEAR'S DAY: CLOSED</p>
+            <p class="copyright">COPYRIGHT 2024 | DEVELOPED BY ABT TECHS</p>
+        </div>
+        
+    </section>
+    <script src="{% static 'users/script.js' %}"></script>
+</body>
+</html>

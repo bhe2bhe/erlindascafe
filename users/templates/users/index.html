@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Erlinda's Cafe</title>
-    <link rel="stylesheet" href="{% static 'users/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'users/css/index.css' %}">
 </head>
 <body>
     <header>
@@ -14,8 +14,8 @@
             <a href="{% url 'users:show_homepage' %}">Home</a>
             <a href="{% url 'users:about' %}">About</a>
             <a href="{% url 'users:menu' %}">Menu</a>
-            <a href="#">Franchise</a>
-            <a href="#">Contact</a>
+            <a href="{% url 'users:franchise' %}">Franchise</a>
+            <a href="{% url 'users:contact' %}">Contact</a>
         </nav>
         <div class="hamburger">
             <span class="bar"></span>
@@ -81,6 +81,19 @@
             </div>
         </div>
     </section>
+
+    <section class="employee">
+        <div class="employee-row">
+            <div class="employee-img">
+                <img src="{% static 'users/images/trophy.webp' %}" alt="">
+            </div>
+            <div>
+                <p class="employee-caption">We at Erlinda's Cafe value the enthusiasm and hardwork of our employees.</p>
+                <a class="employee-btn" href="{% url 'users:employee' %}">Check out our Employee of the Month</a>
+            </div>
+        </div>
+    </section>
+    
     <section class="footer">
         <div class="end-message">
             <a href="{% url 'users:logo' %}"><img src="{% static 'users/images/erlindas-logo.png' %}" alt=""></a>

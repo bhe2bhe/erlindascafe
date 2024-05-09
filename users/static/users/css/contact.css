@@ -8,12 +8,10 @@
 
 body {
     font-family: "Glass Antiqua", cursive;
-    background: url('../images/bar-counter.jpg') no-repeat;
+    /* background: url('../images/erlinda-bldg.jpg') no-repeat;
     background-position:top center;
-    background-size: contain;
-    /* background-size: contain; */
-    background-color: black;
-    /* min-height: 200vh; */
+    background-size: contain; */
+    background-color: rgb(230, 228, 214);
 }
 
 header {
@@ -128,67 +126,152 @@ header a img{
     }
 }
 
-.our-story {
-    /* background-color: rgba(145, 104, 53, 0.558); */
-    width: 88%;
-    margin: 160px auto;
-    margin-left: 0;
-    padding-left: 60px;
-    padding-right: 20px;
-    font-size: 6rem;
-    color: rgb(230, 228, 214);
-    text-shadow: 2px 6px 8px black;
-    
-}
 
-.box {
-    /* background-color: rgb(4, 71, 71); */
+.top {
     background: linear-gradient(45deg, black, rgb(4, 71, 71));
-    /* background: linear-gradient(45deg, rgb(4, 71, 71), rgb(145, 104, 53)); */
-    width: 85vw;
-    height: auto;
-    position: relative;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.575);
+}
+.top h1 {
+    font-size: 70px;
+    padding-top: 140px;
+    padding-left: 46px;
     color: rgb(230, 228, 214);
     text-shadow: 2px 6px 8px black;
-    /* top: 90%; */
-    /* overflow: hidden; */
+}
+.fb-logo-container {
+    width: 60%;
+    margin: auto;
+    /* margin-top: 20px; */
+    
 }
 
-.box h1 {
-    margin-bottom: 40px;
+.fb-logo {
+    width: 20%;
+    opacity: .70;
+
+}
+.container-logo {
+    width: 70%;
+}
+.buttons {
+    margin-top: 60px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 80px;
+}
+.see-fb, .messenger {
+    font-size: 22px;
+    color: rgb(230, 228, 214);
+    text-decoration: none;
+    
 }
 
-.box-story {
-    padding: 100px 80px; 
-    letter-spacing: 2px;
-    line-height: 1.8rem;
+.see-fb {
+    background-color:rgb(145, 104, 53);
+    color: black;
+    padding: 8px 12px;
+}
+.see-fb:hover{
+    background-color: rgba(145, 104, 53, 0.322);
+    color: rgb(230, 228, 214); 
+    font-size: 24px;
 }
 
-.image-box {
-    /* position: absolute;
-    right: 5%;
-    bottom: 0; */
-    width: 80%;
-    margin-left: 30%;
-    margin-top: -60px;
-    margin-bottom: -60px;
+.messenger {
+    border: 1px solid rgb(145, 104, 53);
+    padding: 7px 11px;
+    display: inline;
+}
+.messenger:hover {
+    border: black;
+    font-size: 24px;
 }
 
-.image-box img {
+.bg {
+    position: fixed;
+    z-index: -2;
+    margin-top: -30%;
+    width: 50%;
+    margin-left: 50%;
+}
+.bg img {
     width: 100%;
-    filter: brightness(70%);
-    
-    
+
+}
+
+.middle {
+    background-color: rgb(230, 228, 214);
+    width: 80%;
+    margin-top: 240px;
+}
+
+.mid-container {
+    background: linear-gradient(45deg, black, rgb(145, 104, 53));
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.575);
+    /* width: 80%; */
+    margin-top: 20%;
+    padding: 60px 46px;
+    font-size: xx-large;
+    color: white;
+}
+.mid-container h1 {
+    color: rgb(230, 228, 214);
+    text-shadow: 2px 6px 8px black;
+    margin-bottom: 50px;
+}
+
+.phone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mid-container img {
+    width: 40%;
+    margin-top: 20px;
+}
+.mid-container p {
+    color: rgb(230, 228, 214);
+    font-size: 22px;
+    line-height: 1.8rem;
+    /* text-align: center; */
+    letter-spacing: 3px;
 }
 
 
+.end-note {
+    /* background-color: rgb(145, 104, 53); */
+    margin-top: 240px;
+    background: linear-gradient(45deg, black, rgb(4, 71, 71));
+    padding-top: 80px;
+    padding-bottom:80px;
+    margin-bottom: 200px;
+    line-height: 80px;
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.575);
+}
 
+.end-note h1 {
+    text-align: center;
+    color: rgb(145, 104, 53);
+    width: 60%;
+    margin: auto;
+    font-size: 56px;
+}
 
+.coffee-end-notes {
+    width: 10%;
+    margin: auto;
+}
 
+.coffee-end-notes img {
+    width: 100%;
+}
 
-
-
-
+.erlindas-text {
+    color: rgb(230, 228, 214);
+    text-shadow: 2px 6px 8px black;
+    font-style: italic;
+    font-size: 70px;
+}
 
 
 
@@ -315,5 +398,91 @@ header a img{
     }
     body {
         background-size: 980px;
+    }
+}
+
+/* TEST FOR MIN_HEIGHT */
+
+@media screen and (min-height: 800px) {
+    .branch-img img {
+        height: 60vh; /* Change minimum height to 80% of the viewport height on longer screens */
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .branch {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .branch:nth-child(3) {
+        background-color: rgb(230, 228, 214);
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    
+    .title {
+        padding: 20px 8px;
+        margin-top: 68px;
+    }
+    .title h1 {
+        font-size: 38px;
+        padding-top: 50px;    
+    }
+    
+    .p-container {
+        font-size: 1.2rem;
+        width: 70%;
+        margin: auto;
+        letter-spacing: 2px;
+        line-height: 1.8rem;
+        padding-left: 12px;
+        margin-bottom: 60px;
+    }
+    .link {
+        margin-bottom: 80px;
+    }
+    
+    .caption h4 {
+        font-size: 38px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .branch-img {
+        box-shadow: 0px -10px 10px -5px rgba(0, 0, 0, 0.5);
+    }
+    .erlindas-text, .franchise-text {
+        font-size: 40px;
+    }
+    .end-note {
+        line-height: 60px;
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 56px;
+        gap: 20px;
+    }
+    .top {
+        padding-bottom: 40px;
+    }
+    .phone-container {
+        flex-direction: column;
+    }
+    .phone-container img {
+        margin-bottom: 70px;
+        margin-top: 16px;
+    }
+    .fb-logo-container {
+        margin-top: 44px;
     }
 }

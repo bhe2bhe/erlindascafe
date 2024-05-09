@@ -147,7 +147,8 @@ header a img{
     
     padding-top: 4px;
     /* color: rgba(255, 255, 255, 0.654); */
-    color: rgba(0, 0, 0, 0.654);
+    color: rgb(230, 228, 214);
+    text-shadow: 2px 6px 8px black;
     font-style: italic;
     text-align: center;
     font-size: 4em;
