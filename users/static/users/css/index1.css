@@ -166,11 +166,10 @@ header a img{
     margin-bottom: 22px;
 }
 
-.our-story.image {
+/* .our-story.image {
     height: 50px;
-    float: left;
-    
-}
+    float: left;    
+} */
 
 .image img {
     height: 280px;
@@ -357,6 +356,7 @@ header a img{
 
 .employee-img {
     text-align: center;    
+    
 }
 
 .employee-img img {
@@ -494,6 +494,10 @@ header a img{
         flex-direction: column;
         margin: 0 16px;
         text-align: center;
+
+    }
+    .employee-btn {
+        /* text-align: center; */
     }
 }
 
@@ -585,6 +589,11 @@ header a img{
     }
     .our-story {
         width: 92%;
+    }
+    .image img {
+        float: none;
+        width:  100%;
+        object-fit: cover;
     }
 }
 

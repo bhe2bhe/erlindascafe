@@ -8,11 +8,12 @@
 
 body {
     font-family: "Glass Antiqua", cursive;
-    /* background: url('../images/erlinda-bldg.jpg') no-repeat;
+    background: url('../images/bar-counter.jpg') no-repeat;
     background-position:top center;
-    background-size: contain; */
-    /* background-color: rgb(230, 228, 214); */
+    background-size: contain;
+    /* background-size: contain; */
     background-color: black;
+    /* min-height: 200vh; */
 }
 
 header {
@@ -127,102 +128,70 @@ header a img{
     }
 }
 
-/* body */
-
-.container {
-    background: linear-gradient(45deg, black, rgb(4, 71, 71));
-    min-height: 100vh;
-    width: 90%;
-    margin: auto;
-    padding-top: 100px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 68px;
-}
-
-.container h1 {
-    margin-bottom: 28px;
-    font-size: 42px;
+.our-story {
+    /* background-color: rgba(145, 104, 53, 0.558); */
+    width: 88%;
+    margin: 160px auto;
+    margin-left: 0;
+    padding-left: 60px;
+    padding-right: 20px;
+    font-size: 6rem;
     color: rgb(230, 228, 214);
     text-shadow: 2px 6px 8px black;
+    
 }
 
-.container h2 {
-    margin-top: 20px;
-    margin-bottom: 22px;
-    font-size: 38px;
-    color:  rgb(230, 228, 214);
-}
-
-.container img {
-    width: 8%;
-    /* margin-bottom: 22px; */
-}
-.person-caption {
-    font-size: 23px;
-    text-align: center;
-    padding: 0 22px;
-    color:rgb(145, 104, 53);
-    margin-top: 28px;
-}
-.person-msg {
-    font-size: 23px;
-    text-align: center;
-    padding: 0 22px;
-    margin-bottom: 28px;
-    color:  rgb(230, 228, 214);
-}
-
-.employee-img {
-    width: 360px;
-    /* border: 1px solid rgba(255, 255, 255, 0.62); */
-    box-shadow: 2px 6px 8px rgba(246, 246, 246, 0.575);
-}
-
-.employee-img img {
-    width: 100%;
-}
-
-.quote {
-    background: linear-gradient(45deg, rgb(145, 104, 53), black);
-    margin-bottom: 68px;
-}
-
-.quote-row {
-    display: flex;
-    flex-grow: 1; /* Allows the divs to grow to fill the container */
-    flex-basis: 50%; /* Sets initial size to 50% of the container */
-    color: rgb(230, 228, 214);
-    justify-content: center;
-    align-items: center;
-}
-
-.quote-row > div {
-    flex-grow: 1; /* Allows the divs to grow to fill the container */
-    flex-basis: 50%; /* Sets initial size to 50% of the container */
-}
-
-.quote-msg h3{
-    font-size: 38px;
-    margin: 16px 22px;
-    letter-spacing: 1.8px;
-    text-shadow: 2px 6px 8px black;
-}
-
-.quote-msg p {
+.box {
+    /* background-color: rgb(4, 71, 71); */
     background: linear-gradient(45deg, black, rgb(4, 71, 71));
-    font-size: 22px;
-    letter-spacing: 1.8px;
-    margin: 16px 22px;
-    padding: 16px 22px;
+    /* background: linear-gradient(45deg, rgb(4, 71, 71), rgb(145, 104, 53)); */
+    width: 85vw;
+    height: auto;
+    position: relative;
+    color: rgb(230, 228, 214);
+    text-shadow: 2px 6px 8px black;
+    /* top: 90%; */
+    /* overflow: hidden; */
 }
 
-.quote-img img {
-    width: 100%;
+.box h1 {
+    margin-bottom: 40px;
 }
+
+.box-story {
+    padding: 100px 80px; 
+    letter-spacing: 2px;
+    line-height: 1.8rem;
+}
+
+.box-story h1 {
+    font-size: 3rem;
+}
+
+.box-story p {
+    font-size: 1.2rem;
+}
+
+.image-box {
+    /* position: absolute;
+    right: 5%;
+    bottom: 0; */
+    width: 80%;
+    margin-left: 30%;
+    margin-top: -60px;
+    margin-bottom: -60px;
+}
+
+.image-box img {
+    width: 100%;
+    filter: brightness(70%);    
+}
+
+
+
+
+
+
 
 
 
@@ -329,9 +298,6 @@ header a img{
     body {
         background-size: 1000px;
     }
-    .quote-row {
-        flex-direction: column;
-    }
 }
 
 
@@ -359,14 +325,11 @@ header a img{
 }
 
 
-
-@media screen and (max-width: 600px) {
-    .container h1 {
-        padding-left: 18px;
-        padding-right: 18px;
-        text-align: center;
+@media (max-width: 600px) { 
+    .our-story {
+        font-size: 4rem;   
     }
-    .container {
-        width: 100%;
+    .box-story h1 {
+        font-size: 2rem;
     }
 }

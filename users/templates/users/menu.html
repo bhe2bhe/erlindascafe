@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erlinda's Cafe</title>
+    <title>Erlinda's Cafe | Menu</title>
     <link rel="stylesheet" href="{% static 'users/css/menuu.css' %}">
 </head>
 <body>
@@ -36,8 +36,7 @@
                     <p>Beverages</p>
                 </div>
                 <div class="back">
-                    <h3>Back of Card</h3>
-                    <p>Additional info</p>
+                    <h3>coffee, milktea & more</h3>
                     <a href="#beverages-menu" class="menu-btn">See Menu Items</a>
                 </div>                        
             </div>
@@ -49,8 +48,7 @@
                     <p>Meals</p>                    
                 </div>
                 <div class="back">
-                    <h3>Back of Card</h3>
-                    <p>Additional info</p>
+                    <h3>middle-eastern delights</h3>
                     <a href="#meals-menu" class="menu-btn">See Menu Items</a>
                 </div>                        
             </div>
@@ -62,8 +60,7 @@
                     <p>Snacks</p>
                 </div>
                 <div class="back">
-                    <h3>Back of Card</h3>
-                    <p>Additional info</p>
+                    <h3>nachos, manakish & more</h3>
                     <a href="#snacks-menu" class="menu-btn">See Menu Items</a>
                 </div>                        
             </div>
@@ -89,33 +86,32 @@
         <div class="row">
             <h1>OUR WORLD-CLASS COFFEE & MILKTEA</h1>
         </div>
+        {% for bev in beverages %}
         <div class="b-row">
             <div class="b-item">
+                
                 <div class="item-image">
-                    <img src="{% static 'users/images/matcha.jpg' %}" alt="">
+                    <img src="{{bev.image.url}}" alt="">
                 </div>
                 <div class="item-caption">
-                    <h3>Matcha Milktea</h3>
+                    <h3>{{ bev.item }}</h3>
                 </div>                
                 <div class="dot-dot">--------------------------------------------------</div>
                 <div class="price">
-                    <p><b>P150</b></p>
+                    <p><b>&#8369; {{ bev.price }} </b></p>
                 </div>
+                {% if request.user.is_authenticated %}
+                    <form action="{% url 'users:delete_confirmation' item_id=bev.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" style="color:white;
+                        padding: 8px 8px;
+                        background-color: black;
+                        color: red;">X</button>
+                    </form>
+                {% endif %}
             </div>
-            <div class="b-item">
-                <div class="item-image">
-                    <img src="{% static 'users/images/erlinda-drink2.jpg' %}" alt="">
-                </div>
-                <div class="item-caption">
-                    <h3>Capuccino</h3>
-                </div>                
-                <div class="dot-dot">--------------------------------------------------</div>
-                <div class="price">
-                    <p><b>P150</b></p>
-                </div>
-            </div>
-            
         </div>
+        {% endfor %}
     </section>
 
     <section class="category-intro">
@@ -130,7 +126,7 @@
                 <p class="feedback">
                     "Erlinda's coffee is a game-changer! Its bold flavor and smooth texture are unmatched. It's like a hug in a mug in every sip!"
                     <span class="feedback-by">&mdash; AB Tagg, CEO ABT Techs</span>
-                </p>
+                </p>                
             </div>
         </div>
     </section>
@@ -139,33 +135,31 @@
         <div class="row">
             <h1>TASTE OUR MIDDLE-EASTERN FLAVORS</h1>
         </div>
+        {% for meal in meals %}
         <div class="b-row">
             <div class="b-item">
                 <div class="item-image">
-                    <img src="{% static 'users/images/matcha.jpg' %}" alt="">
+                    <img src="{{ meal.image.url }}" alt="">
                 </div>
                 <div class="item-caption">
-                    <h3>Biryani</h3>
+                    <h3>{{ meal.item }}</h3>
                 </div>                
                 <div class="dot-dot">--------------------------------------------------</div>
                 <div class="price">
-                    <p><b>P150</b></p>
+                    <p><b>&#8369; {{ meal.price }} </b></p>
                 </div>
-            </div>
-            <div class="b-item">
-                <div class="item-image">
-                    <img src="{% static 'users/images/erlinda-drink2.jpg' %}" alt="">
-                </div>
-                <div class="item-caption">
-                    <h3>Biryani</h3>
-                </div>                
-                <div class="dot-dot">--------------------------------------------------</div>
-                <div class="price">
-                    <p><b>P150</b></p>
-                </div>
-            </div>
-            
+                {% if request.user.is_authenticated %}
+                    <form action="{% url 'users:delete_confirmation' item_id=meal.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" style="color:white;
+                        padding: 8px 8px;
+                        background-color: black;
+                        color: red;">X</button>
+                    </form>
+                {% endif %}
+            </div>            
         </div>
+        {% endfor %}
     </section>
 
     <section class="category-intro">
@@ -189,33 +183,31 @@
         <div class="row">
             <h1>SAVOR EVERY QUICK BITE</h1>
         </div>
+        {% for snack in snacks %}
         <div class="b-row">
             <div class="b-item">
                 <div class="item-image">
-                    <img src="{% static 'users/images/matcha.jpg' %}" alt="">
+                    <img src="{{snack.image.url}}" alt="">
                 </div>
                 <div class="item-caption">
-                    <h3>Biryani</h3>
+                    <h3>{{snack.item}}</h3>
                 </div>                
                 <div class="dot-dot">--------------------------------------------------</div>
                 <div class="price">
-                    <p><b>P150</b></p>
+                    <p><b>&#8369; {{snack.price}}</b></p>
                 </div>
-            </div>
-            <div class="b-item">
-                <div class="item-image">
-                    <img src="{% static 'users/images/erlinda-drink2.jpg' %}" alt="">
-                </div>
-                <div class="item-caption">
-                    <h3>Biryani</h3>
-                </div>                
-                <div class="dot-dot">--------------------------------------------------</div>
-                <div class="price">
-                    <p><b>P150</b></p>
-                </div>
-            </div>
-            
+                {% if request.user.is_authenticated %}
+                    <form action="{% url 'users:delete_confirmation' item_id=snack.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" style="color:white;
+                        padding: 8px 8px;
+                        background-color: black;
+                        color: red;">X</button>
+                    </form>
+                {% endif %}
+            </div>    
         </div>
+        {% endfor %}
     </section>
     
     

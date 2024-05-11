@@ -8,12 +8,10 @@
 
 body {
     font-family: "Glass Antiqua", cursive;
-    background: url('../images/bar-counter.jpg') no-repeat;
+    /* background: url('../images/erlinda-bldg.jpg') no-repeat;
     background-position:top center;
-    background-size: contain;
-    /* background-size: contain; */
-    background-color: black;
-    /* min-height: 200vh; */
+    background-size: contain; */
+    background-color: rgb(230, 228, 214);
 }
 
 header {
@@ -128,70 +126,26 @@ header a img{
     }
 }
 
-.our-story {
-    /* background-color: rgba(145, 104, 53, 0.558); */
-    width: 88%;
-    margin: 160px auto;
-    margin-left: 0;
-    padding-left: 60px;
-    padding-right: 20px;
-    font-size: 6rem;
-    color: rgb(230, 228, 214);
-    text-shadow: 2px 6px 8px black;
+.login {
+    border: 1px solid black;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.575);
+    width: 400px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px 30px;
     
-}
-
-.box {
-    /* background-color: rgb(4, 71, 71); */
-    background: linear-gradient(45deg, black, rgb(4, 71, 71));
-    /* background: linear-gradient(45deg, rgb(4, 71, 71), rgb(145, 104, 53)); */
-    width: 85vw;
-    height: auto;
-    position: relative;
-    color: rgb(230, 228, 214);
-    text-shadow: 2px 6px 8px black;
-    /* top: 90%; */
-    /* overflow: hidden; */
-}
-
-.box h1 {
     margin-bottom: 40px;
 }
-
-.box-story {
-    padding: 100px 80px; 
-    letter-spacing: 2px;
-    line-height: 1.8rem;
+.login p{
+    font-size: 1.4rem;
+    line-height: 30px;
 }
-
-.image-box {
-    /* position: absolute;
-    right: 5%;
-    bottom: 0; */
-    width: 80%;
-    margin-left: 30%;
-    margin-top: -60px;
-    margin-bottom: -60px;
-}
-
-.image-box img {
+.login button {
+    margin-top: 20px;
+    padding: 20px 20px;
     width: 100%;
-    filter: brightness(70%);
-    
-    
+    /* border-radius: 5px; */
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -292,6 +246,9 @@ header a img{
     body {
         background-size: 1000px;
     }
+    .quote-row {
+        flex-direction: column;
+    }
 }
 
 
@@ -314,6 +271,19 @@ header a img{
         margin-bottom: -30px;
     }
     body {
-        background-size: 980px;
+        background-size: 980px; 
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .container h1 {
+        padding-left: 18px;
+        padding-right: 18px;
+        text-align: center;
+    }
+    .container {
+        width: 100%;
     }
 }

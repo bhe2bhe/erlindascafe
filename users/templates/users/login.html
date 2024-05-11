@@ -1,11 +1,10 @@
 {% load static %}
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erlinda's Cafe | Employee of the Month</title>
-    <link rel="stylesheet" href="{% static 'users/css/employee.css' %}">
+    <title>Erlinda's Cafe | Login</title>
+    <link rel="stylesheet" href="{% static 'users/css/login.css' %}">
 </head>
 <body>
     <header>
@@ -20,45 +19,28 @@
         <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
-            <span class="bar"></span>
+            <span class="bar"></span> 
         </div>
     </header>
 
-    <div class="container">
-        <h1>Erlinda's Employee of the Month</h1>
-        <div class="employee-img">
-            <img src="{{ employee.image.url }}" alt="">
-        </div>
-        <h2>{{ employee.name }}</h2>
-        <img src="{% static 'users/images/trophy.webp' %}" alt="">
-        <p class="person-caption">{{ employee.caption }}</p>
-        <br>
-        <p class="person-msg">Juan's message for everyone: "{{ employee.employee_message }}"</p>
+    <h1 style="margin-top:200px;
+        text-align:center;
+        fonst-size:3rem;">Admin Login | PRIVATE</h1>
+    <div class="login">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+        {% if error_message %}
+            <p>{{ error_message }}</p>
+        {% endif %}
     </div>
-    <div class="quote">
-        <div class="quote-row">
-            <div class="quote-msg">
-                <h3>A message from Erlinda's Cafe family</h3>
-                <p>"{{quote.quote}}" &mdash; {{quote.quote_by}}</p>
-            </div>
-            <div class="quote-img">
-                <img src="{{quote.image.url}}" alt="">
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
 
 
     <section class="footer">
         <div class="end-message">
-            <a href="logo.html"><img src="{% static 'users/images/erlindas-logo.png' %}" alt=""></a>
+            <a href="{% url 'users:logo' %}"><img src="{% static 'users/images/erlindas-logo.png' %}" alt=""></a>
             <h1>the reason you crave middle-eastern</h1>
         </div>
         <div class="end-notes">

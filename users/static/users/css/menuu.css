@@ -146,7 +146,7 @@ header a img{
 .intro h1 {
     
     padding-top: 4px;
-    /* color: rgba(255, 255, 255, 0.654); */
+    /* color: rgba(0, 0, 0, 0.654); */
     color: rgb(230, 228, 214);
     text-shadow: 2px 6px 8px black;
     font-style: italic;
@@ -212,8 +212,8 @@ header a img{
     color: rgba(255, 228, 196, 0.798);
 }
 .back {
-    background-color: rgb(57, 57, 57);
-    color: white;
+    background: linear-gradient(45deg, black, rgb(4, 71, 71));
+    color: rgb(230, 228, 214);
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
@@ -224,15 +224,15 @@ header a img{
 .menu-btn {
     margin-top: 10px;
     text-decoration: none;
-    background-color: rgb(145, 104, 53);
-    color: white;
+    color: rgb(230, 228, 214);
+    border: 1px solid rgba(255, 228, 196, 0.798);
     padding: 10px 20px;
     border-radius: 8px;
 }
 
-.menu-btn:hover {
-    background-color: rgba(255, 153, 0, 0.771);
-    color: black;
+.menu-btn:hover {    
+    background-color:  rgb(145, 104, 53);
+    color: white;
 }
 
 .category-intro {
@@ -300,10 +300,11 @@ header a img{
 .item-image img {
     width: 80px;
     height: 90px;
+    object-fit: cover;
 }
 
 .item-caption {
-    text-align: start;
+    padding-left: 0;
 }
 
 @media screen and (max-width: 768px) {
