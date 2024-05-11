@@ -53,6 +53,11 @@ MIDDLEWARE = [
     "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    # 'https://example.com',
+    'https://web-production-1a6f.up.railway.app',
+]
+
 ROOT_URLCONF = 'erlinda.urls'
 
 TEMPLATES = [
